@@ -10,6 +10,7 @@ import androidx.paging.LoadState.Loading
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import ro.alexmamo.firestorepagination.Oldresults.ProductsAdapter
 import ro.alexmamo.firestorepagination.R
 import ro.alexmamo.firestorepagination.databinding.ActivityProductsBinding
 

@@ -2,6 +2,7 @@ package ro.alexmamo.firestorepagination.di
 
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query.Direction.ASCENDING
+import com.google.firebase.firestore.Query.Direction.DESCENDING
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,6 +19,6 @@ object AppModule {
     @Singleton
     fun provideQueryProductsByName() = FirebaseFirestore.getInstance()
             .collection(PRODUCTS_COLLECTION)
-            .orderBy(NAME_PROPERTY, ASCENDING)
+            .orderBy(NAME_PROPERTY, DESCENDING)
             .limit(PAGE_SIZE.toLong())
 }
